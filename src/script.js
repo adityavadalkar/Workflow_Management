@@ -62,15 +62,15 @@ database.ref('/pushData').once('value', function(snapshot){
 })
 
 
-var preObject = document.getElementById('Pedestrian');
-var dbRefObject = firebase.database().ref().child('Pedestrian')
+// var preObject = document.getElementById('setData');
+// var dbRefObject = firebase.database().ref().child('setData')
 // console.log("hi"+preObject)
 // console.log("bye"+dbRefObject)
 
-   dbRefObject.on('value', function(snap) {
-     preObject.innerText = JSON.stringify(snap.val(), null, 3)
-     preObject.innerText.forEach
-   })
+  //  dbRefObject.on('value', function(snap) {
+  //    preObject.innerText = JSON.stringify(snap.val(), null, 3)
+    //  preObject.innerText.forEach
+  //  })
 
   //  var preObject1 = document.getElementById('setData');
   //  var dbRefObject1 = firebase.database().ref().child('setData')
@@ -90,11 +90,46 @@ var dbRefObject = firebase.database().ref().child('Pedestrian')
 
     return returnArr;
 };
-
-firebase.database().ref('/setData/value').on('value', function(snapshot) {
-  var children = snapshotToArray(snapshot);
+var children
+firebase.database().ref('reports/-LyJkP7-MR8OeY2Shvqg').on('value', function(snapshot) {
+  children = snapshotToArray(snapshot);
   var i,j
 
   console.log("Lat: "+children[0])
   console.log("Long: "+children[1])
 });
+       database.ref('reports/-LyJkP7-MR8OeY2Shvqg').once('value', function(snapshot){
+            if(snapshot.exists()){
+                var content = '';
+                children.forEach(function(snap){
+                   content +='<div id="container-rows">'+
+                   '<div id="sample-row">'+
+                       '<div class="row">';
+                       content += '<div class="col-md-2">'+
+                       '<div class="form-group label-floating">'+
+                           '<label class="control-label">'+ '</label>'+
+                          //  '<input type="text" class="form-control">'+
+                       '</div>' + " " + '</div>' ;   
+                    content += '<div class="col-md-2">'+
+                    '<div class="form-group label-floating">'+
+                        '<label class="control-label">'+ '</label>'+
+                        // '<input type="text" class="form-control">'+
+                    '</div>' + children[0] + '</div>' ;
+                    content += '<div class="col-md-2">'+
+                    '<div class="form-group label-floating">'+
+                        '<label class="control-label">'+ '</label>'+
+                        // '<input type="text" class="form-control">'+
+                    '</div>' + children[1] + '</div>' ;
+                    content+= '<div class="col-md-2">'+'<div class="form-group label-floating">'+
+                        '<label class="control-label">'+ '</label>'+
+                        // '<input type="text" class="form-control">'+
+                    '</div>' + "Medical College Rd" + '</div>' ;
+                    
+                
+                      content += '</div>';
+               });
+                $('#table').append(content);
+            }
+          
+        });
+      

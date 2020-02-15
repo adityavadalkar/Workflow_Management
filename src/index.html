@@ -1,16 +1,150 @@
 <!DOCTYPE HTML>
 <html>
+  <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>User Dashboard</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--  Material Dashboard CSS    -->
+    <link href="../assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 <head>
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="../assets/css/animate.css"></link>
+    <link href="../assets/css/bootstrap.min.css"></link>
+    <link href="../assets/css/demo.css"></link>
+    <link href="../assets/css/material-dashboard.css"></link>
   </head>
+  <st>
 <body>
+    <style>
+            #card-content table-responsive
+            {
+                position: absolute;
+            }
+            #wrapper
+            {
+                z-index: 1000;
+            }
+        </style>
     <pre id="Pedestrian"></pre>
     <pre id="setData"></pre>
+    <div class="wrapper">
+        <div class="sidebar" data-color="red" data-image="../assets/img/sidebar-1.jpg">
+           
+        <!-- Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-<!-- <button onClick="pushData()">Add data to Firebase</button> --> 
-<!-- <button onClick="setData()">Update data to Firebase</button> -->
-<!-- <input type="value" id="dataValue"></input> -->
+        Tip 2: you can also add an image using data-image tag -->
+    
+            <div class="logo">
+                <a href="http://www.sih.gov.in" class="simple-text">
+                    Your Profile
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="table.html">
+                            <i class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../templates/RWD.html">
+                            <i class="material-icons">person</i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="./table.html">
+                            <i class="material-icons">content_paste</i>
+                            <p>Table List</p>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="./typography.html">
+                            <i class="material-icons">library_books</i>
+                            <p>Typography</p>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="./icons.html">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Icons</p>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="../templates/maps.html">
+                            <i class="material-icons">location_on</i>
+                            <p>Maps</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../templates/notifications.html">
+                            <i class="material-icons text-gray">notifications</i>
+                            <p>Notifications</p>
+                        </a>
+                    </li>
+                    <!-- <li class="active-pro">
+                        <a href="upgrade.html">
+                            <i class="material-icons">unarchive</i>
+                            <p>Upgrade to PRO</p>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div> 
+        
+    <div class="card-content table-responsive">
+      <table class="table" id="table">
+          <div id="container-rows">
+              <div id="sample-row">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group label-floating">
+                            <!-- <label class="control-label"> </label> -->
+                            <!-- <input type="text" class="form-control"> -->
+                        </div>
+                    </div>  
+                    <div class="col-md-2">
+                          <div class="form-group label-floating">
+                            <p color="blue" font="18">Lattitude</p>
+                              <!-- <input type="text" class="form-control"> -->
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group label-floating">
+                              <p color="blue" fontsize="30">Longitude</p>
+                              <!-- <input type="text" class="form-control"> -->
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group label-floating">
+                            <p color="blue" fontsize="18">Address</p>
+                              <!-- <input type="text" class="form-control"> -->
+                          </div>
+                      </div>
+                      <div class="col-md-1">
+                          <div class="form-group label-floating">
+                              <!-- <label class="control-label"> </label> -->
+                              <button onclick="window.location.href = 'table.html'">Click Here to Start New Project</button>
+   
+                          </div>
+                      </div>
+                  </div>
 <script src="bundle.js"></script>
 
 </body>
